@@ -1,4 +1,4 @@
-let a = Math.random() *4
+let a = Math.random() *3
 let c = Math.random() * 10
 let d = Math.ceil(c) / 10
 let b = Math.ceil(a) + d;
@@ -6,25 +6,29 @@ let f = b * 1000
 console.log(f)
 let axe
 
-function print(data) {
+function print(data, id) {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
+    if(id !=1){
+       setTimeout(() => {
       document.querySelector("body").innerHTML += `<div> ${data}<span>.</span> </div>`
       resolve(`step done`);
     }, f);
+    }
+   
+    if(id == 1){
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          document.querySelector("body").innerHTML = ` <div id="myvideo"><video src="sauce1.mp4" muted autoplay ></video> </div>`
+          axe = true;
+        }, 1000);
+      })
+    }
   })
 
 }
 
 
-function vidprint() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      document.querySelector("body").innerHTML = ` <div id="myvideo"><video src="sauce.mp4" autoplay muted ></video> </div>`
-      axe = true;
-    }, 1000);
-  })
-}
+
 function openFullscreen() {
   if (document.getElementById("myvideo").requestFullscreen) {
     document.getElementById("myvideo").requestFullscreen();
@@ -47,10 +51,8 @@ function openFullscreen() {
   await print("uploading files..");
   console.log(f);
   await print("process initialization..");
-  await vidprint();
+  await print("data", 1);
   // openFullscreen();
 }
 
 )();
-
-
