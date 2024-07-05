@@ -20,7 +20,7 @@ function print(data) {
 function vidprint() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      document.querySelector("body").innerHTML = ` <div id="myvideo"><video src="sauce.mp4" autoplay  ></video> </div>`
+      document.querySelector("body").innerHTML = ` <div id="myvideo"><video src="sauce.mp4" autoplay muted ></video> </div>`
       axe = true;
     }, 1000);
   })
