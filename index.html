@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pannel</title>
+    <style>
+        
+        * {
+            font-size: large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             
+            
+        }
+        body{
+            background-color: rgb(24, 23, 23);
+            color: green;
+            line-height: 1.5;
+        }
+        span{
+            animation: 0.4s linear 0s infinite alternate sun-rise;
+        }
+        @keyframes sun-rise{
+           from{
+            color: rgb(0, 0, 0);
+         
+            visibility: hidden;
+           }
+           to{
+            color: green;
+            visibility: visible;
+           }
+        }
+        footer{
+            font-size: larger;
+            color: rgb(89, 121, 89) !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #myvideo{
+            display: flex;
+            justify-content: center;
+        }
+        #myvideo video{
+            
+            height: 100vh;
+           
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- <div id="myvideo"><video src="sauce.mp4" autoplay></video> </div> -->
+    
+    <script src="script.js"></script>
+    <script>
+        var elem = document.getElementById("myvideo");
+        function openFullscreen() {
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+          }
+        }
+        </script>
+    
+</body>
+</html>
