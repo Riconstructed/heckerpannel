@@ -18,7 +18,7 @@ function print(data, id) {
     if(id == 1){
       return new Promise((resolve, reject) => {
         setTimeout(() => {
-          document.querySelector("body").innerHTML = ` <div id="myvideo"><video src="sauce1.mp4" controls autoplay ></video> </div>`
+          document.querySelector("body").innerHTML = ` <div id="myvideo"><video src="sauce.mp4" controls autoplay ></video> </div>`
           axe = true;
         }, 1000);
       })
